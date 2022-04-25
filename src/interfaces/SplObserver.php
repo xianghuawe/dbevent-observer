@@ -1,6 +1,6 @@
 <?php
 
-namespace teamones\dbeventObserver\interfaces;
+namespace xianghua_we\dbeventObserver\interfaces;
 
 /**
  * 观察者模型 观察者接口

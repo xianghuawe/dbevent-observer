@@ -1,5 +1,5 @@
 {
-  "name": "teamones/dbevent-observer",
+  "name": "xianghua_we/dbevent-observer",
   "description": "The Teamones dbevent observer",
   "type": "library",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "teamones\\dbeventObserver": "src/"
+      "xianghua_we\\dbeventObserver": "src/"
     }
   }
 }

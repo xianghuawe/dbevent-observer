@@ -1,8 +1,8 @@
 <?php
 
-namespace teamones\dbeventObserver;
+namespace xianghua_we\dbeventObserver;
 
-use teamones\dbeventObserver\interfaces\SplObserver;
+use xianghua_we\dbeventObserver\interfaces\SplObserver;
 
 /**
  * 观察者模型 被观察者的接口实现

@@ -48,9 +48,9 @@ $eventLogs = [
         'belong_system' => 'teamones-saas',
     ],
 ];
-$exampleSubject = new \teamones\dbeventObserver\examples\ExampleModel();
+$exampleSubject = new \xianghua_we\dbeventObserver\examples\ExampleModel();
 
-$exampleSubject->attach(new \teamones\dbeventObserver\examples\ExampleObServer());
+$exampleSubject->attach(new \xianghua_we\dbeventObserver\examples\ExampleObServer());
 // 框架产生的event update log
 
 foreach ($eventLogs as $event) {

@@ -1,9 +1,9 @@
 <?php
 
-namespace teamones\dbeventObserver\examples;
+namespace xianghua_we\dbeventObserver\examples;
 
-use teamones\dbeventObserver\interfaces\SplObserver;
-use teamones\dbeventObserver\interfaces\SplSubject;
+use xianghua_we\dbeventObserver\interfaces\SplObserver;
+use xianghua_we\dbeventObserver\interfaces\SplSubject;
 
 class ExampleObServer implements SplObserver
 {
