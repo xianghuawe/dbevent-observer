@@ -65,4 +65,17 @@ interface SplSubject
      */
     public function getSplNewData(): array;
 
+    /**
+     * 设置当前对象的完整data
+     * @param array $subjectData
+     * @return void
+     */
+    public function setSubjectData(array $subjectData): void;
+
+    /**
+     * 获得当前对象的完整data
+     * @return array
+     */
+    public function getSubjectData(): array;
+
 }

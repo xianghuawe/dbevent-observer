@@ -15,6 +15,7 @@ trait SplSubjectEnforcer
     protected $splPrimaryId = null;
     protected $splOldData = [];
     protected $splNewData = [];
+    protected $subjectData = [];
     protected static $splJsonFields = [
         'json'
     ];
@@ -156,4 +157,22 @@ trait SplSubjectEnforcer
     {
         $this->splUpdateData = $splUpdateData;
     }
+
+    /**
+     * 设置当前对象的完整data
+     */
+    public function setSubjectData($subjectData): void
+    {
+        $this->subjectData = $subjectData;
+    }
+
+    /**
+     * 获得当前对象的完整data
+     * @return array
+     */
+    public function getSubjectData(): array
+    {
+        return $this->subjectData;
+    }
+
 }
