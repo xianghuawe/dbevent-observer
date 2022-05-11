@@ -11,15 +11,27 @@ trait SplSubjectEnforcer
 {
     /** @var SplObserver[] */
     protected $observers = [];
-    protected $splUpdateData = [];
+    protected $splUpdateData = null;
     protected $splPrimaryId = null;
-    protected $splOldData = [];
-    protected $splNewData = [];
-    protected $subjectData = [];
+    protected $splOldData = null;
+    protected $splNewData = null;
+    protected $subjectData = null;
     protected static $splJsonFields = [
         'json'
     ];
 
+    /**
+     * 执行完之后清理本次产生的数据
+     * @return void
+     */
+    public function clean()
+    {
+        $this->setSplUpdateData(null);
+        $this->setSplPrimaryId(null);
+        $this->setSplOldData(null);
+        $this->setSplNewData(null);
+        $this->setSubjectData(null);
+    }
 
     /**
      * @inheritDoc
@@ -82,6 +94,7 @@ trait SplSubjectEnforcer
         foreach ($this->observers as $observer) {
             $observer->update($this);
         }
+        $this->clean();
     }
 
     /**
@@ -130,30 +143,30 @@ trait SplSubjectEnforcer
 
     /**
      * 设置老数据
-     * @param array $splOldData
+     * @param $splOldData
      * @return void
      */
-    private function setSplOldData(array $splOldData): void
+    private function setSplOldData($splOldData): void
     {
         $this->splOldData = $splOldData;
     }
 
     /**
      * 设置新数据
-     * @param array $splNewData
+     * @param $splNewData
      * @return void
      */
-    private function setSplNewData(array $splNewData): void
+    private function setSplNewData($splNewData): void
     {
         $this->splNewData = $splNewData;
     }
 
     /**
      * 设置更新的数据
-     * @param array $splUpdateData
+     * @param $splUpdateData
      * @return void
      */
-    private function setSplUpdateData(array $splUpdateData): void
+    private function setSplUpdateData($splUpdateData): void
     {
         $this->splUpdateData = $splUpdateData;
     }
