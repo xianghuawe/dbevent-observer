@@ -1,6 +1,6 @@
 {
   "name": "xianghua_we/dbevent-observer",
-  "description": "The Teamones dbevent observer",
+  "description": "Teamones DB Event ObServer package",
   "type": "library",
   "license": "MIT",
   "authors": [
